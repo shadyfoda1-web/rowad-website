@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>رواد العاصمة للتجارة العامة | Rowad Al Asema General Trading</title>
+<meta name="description" content="رواد العاصمة للتجارة العامة في دبي - استيراد وتصدير وتوريد وتوزيع داخل الإمارات وخارجها.">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#07142b;color:#fff;line-height:1.8}
+body.en{direction:ltr}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1180px,92%);margin:auto}
+.num,.email{direction:ltr;unicode-bidi:isolate;display:inline-block}
+
+.topbar{position:sticky;top:0;z-index:100;background:rgba(2,10,24,.94);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(12px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:15px 0}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:74px;height:74px;object-fit:contain;background:#fff;border-radius:18px;padding:7px;box-shadow:0 10px 25px rgba(0,0,0,.25)}
+.brand h1{font-size:23px;margin:0;font-weight:900}
+.brand p{margin:0;color:#d8b56a;font-size:12px;letter-spacing:1.8px}
+nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+nav a{font-size:15px;color:#eaf0f8}
+.header-actions{display:flex;gap:10px;align-items:center}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 23px;border-radius:15px;font-weight:800;border:0;cursor:pointer;transition:.25s;font-size:15px}
+.btn:hover{transform:translateY(-2px)}
+.gold{background:linear-gradient(135deg,#f2d47e,#c99427);color:#08111f;box-shadow:0 15px 34px rgba(201,148,39,.25)}
+.outline{border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.07);color:#fff}
+
+.hero{position:relative;min-height:88vh;background:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=80') center/cover;display:flex;align-items:center}
+.overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,12,28,.86),rgba(7,20,43,.55))}
+.hero-content{position:relative;z-index:2}
+.hero-card{max-width:800px;background:rgba(8,19,42,.74);border:1px solid rgba(255,255,255,.12);border-radius:34px;padding:44px;backdrop-filter:blur(14px);box-shadow:0 32px 90px rgba(0,0,0,.42)}
+.badge,.tag{display:inline-block;background:rgba(212,164,69,.16);border:1px solid rgba(212,164,69,.25);color:#e3bd73;border-radius:999px;padding:8px 15px;font-size:13px}
+.hero h2{font-size:58px;line-height:1.15;margin:18px 0 14px}
+.hero p{font-size:18px;color:#dbe4f2;margin:0}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+
+.stats{margin-top:-48px;position:relative;z-index:3}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stat{background:rgba(8,19,42,.96);border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:22px;text-align:center;box-shadow:0 18px 45px rgba(0,0,0,.25)}
+.stat strong{display:block;color:#d7b166;font-size:20px}
+.stat span{color:#cad5e4;font-size:14px}
+
+.section{padding:90px 0}
+.dark{background:rgba(255,255,255,.018)}
+.title{text-align:center;margin-bottom:36px}
+.title h2,.section h2{font-size:42px;margin:12px 0 10px}
+.title p,.section p{color:#d5deee}
+
+.two{display:grid;grid-template-columns:1.15fr .85fr;gap:24px}
+.box,.service-card,.sector-card,.product-card,.why-card,.contact-card{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);border-radius:28px;box-shadow:0 15px 42px rgba(0,0,0,.18)}
+.box{padding:34px}
+.side{background:linear-gradient(180deg,rgba(212,164,69,.11),rgba(255,255,255,.04))}
+
+.grid{display:grid;gap:22px}
+.services{grid-template-columns:repeat(3,1fr)}
+.service-card{padding:28px;transition:.25s}
+.service-card:hover,.sector-card:hover,.product-card:hover,.why-card:hover{transform:translateY(-6px)}
+.service-card b{display:flex;width:52px;height:52px;border-radius:16px;align-items:center;justify-content:center;background:rgba(212,164,69,.16);color:#dcb86d;margin-bottom:14px}
+.service-card h3{font-size:23px;margin:0 0 8px}
+
+.sectors{grid-template-columns:repeat(3,1fr)}
+.sector-card,.product-card{overflow:hidden;transition:.25s}
+.sector-card img,.product-card img{width:100%;height:220px;object-fit:cover}
+.sector-card h3,.product-card h3{font-size:23px;margin:18px 22px 6px}
+.sector-card p{margin:0 22px 24px;color:#d5deee}
+.products{grid-template-columns:repeat(3,1fr);text-align:center}
+.product-card h3{padding-bottom:18px}
+
+.why{grid-template-columns:repeat(4,1fr)}
+.why-card{padding:26px;text-align:center}
+.why-card h3{margin-top:0;font-size:22px}
+
+.cta{padding:40px 0}
+.cta-box{text-align:center;background:linear-gradient(135deg,#c99427,#f2d47e);color:#08111f;border-radius:34px;padding:58px;box-shadow:0 20px 50px rgba(0,0,0,.22)}
+.cta-box h2{font-size:44px;margin:0 0 10px}
+.cta-box p{margin-bottom:24px;color:#172033}
+
+.contact{display:grid;gap:16px}
+.contact-card{padding:22px}
+.contact-card strong{display:block;color:#d7b166;margin-bottom:6px}
+.contact-card span{font-size:21px;font-weight:800}
+.map-box{overflow:hidden;border-radius:28px;border:1px solid rgba(255,255,255,.12);box-shadow:0 18px 45px rgba(0,0,0,.25);margin-top:28px}
+.map-box iframe{width:100%;height:420px;border:0;display:block}
+
+.float-wa{position:fixed;bottom:24px;left:24px;background:#22c55e;color:#fff;padding:14px 22px;border-radius:999px;font-weight:900;box-shadow:0 18px 38px rgba(0,0,0,.28);z-index:200}
+body.en .float-wa{left:auto;right:24px}
+
+footer{background:#050e1f;border-top:1px solid rgba(255,255,255,.08);padding:28px 0}
+.footer{display:flex;justify-content:space-between;gap:20px;align-items:center;color:#cbd5e1}
+.footer strong{display:block;color:#fff}
+.footer p{margin:0;color:#d8b56a;font-size:12px;letter-spacing:1.5px}
+
+
+.company-gallery{grid-template-columns:1fr}
+.company-photo-card{overflow:hidden;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);border-radius:32px;box-shadow:0 18px 48px rgba(0,0,0,.22)}
+.company-photo-card img{width:100%;height:auto;display:block}
+.company-photo-card .photo-caption{padding:22px;text-align:center;color:#d5deee}
+.company-photo-card .photo-caption h3{margin:0 0 8px;font-size:26px;color:#fff}
+
+@media(max-width:1050px){
+.stats-grid,.services,.sectors,.products,.why{grid-template-columns:repeat(2,1fr)}
+.two{grid-template-columns:1fr}
+.hero h2{font-size:44px}
+nav{display:none}
+}
+@media(max-width:720px){
+.nav{display:grid;grid-template-columns:1fr}
+.header-actions{flex-wrap:wrap}
+.brand h1{font-size:18px}
+.hero{min-height:auto;padding:70px 0}
+.hero-card{padding:26px}
+.hero h2{font-size:34px}
+.stats{margin-top:0;padding-top:20px}
+.stats-grid,.services,.sectors,.products,.why{grid-template-columns:1fr}
+.section{padding:62px 0}
+.title h2,.section h2,.cta-box h2{font-size:30px}
+.footer{display:grid}
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="container nav">
+    <div class="brand">
+      <img src="https://i.ibb.co/yFSj4JB9/logo-png.jpg" alt="Rowad Al Asema">
+      <div>
+        <h1 data-ar="رواد العاصمة للتجارة العامة" data-en="Rowad Al Asema General Trading">رواد العاصمة للتجارة العامة</h1>
+        <p>ROWAD AL ASEMA GENERAL TRADING</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#about" data-ar="من نحن" data-en="About">من نحن</a>
+      <a href="#services" data-ar="الخدمات" data-en="Services">الخدمات</a>
+      <a href="#sectors" data-ar="القطاعات" data-en="Sectors">القطاعات</a>
+      <a href="#products" data-ar="المنتجات" data-en="Products">المنتجات</a>
+      <a href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn outline" onclick="toggleLang()" id="langBtn">EN</button>
+      <a class="btn gold" href="https://wa.me/971525457338" target="_blank" data-ar="واتساب مباشر" data-en="WhatsApp">واتساب مباشر</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="container hero-content">
+    <div class="hero-card">
+      <span class="badge">General Trading • Import • Export • Distribution</span>
+      <h2 data-ar="نربط الفرص التجارية بالسوق الإماراتي" data-en="Connecting Business Opportunities to the UAE Market">نربط الفرص التجارية بالسوق الإماراتي</h2>
+      <p data-ar="رواد العاصمة للتجارة العامة مؤسسة تعمل بمرونة واحترافية لتقديم حلول الاستيراد والتصدير والتوريد والتوزيع والبيع بالجملة والتجزئة داخل دولة الإمارات وخارجها."
+         data-en="Rowad Al Asema General Trading provides flexible and professional solutions for import, export, supply, distribution, wholesale and retail trading inside and outside the UAE.">
+         رواد العاصمة للتجارة العامة مؤسسة تعمل بمرونة واحترافية لتقديم حلول الاستيراد والتصدير والتوريد والتوزيع والبيع بالجملة والتجزئة داخل دولة الإمارات وخارجها.
+      </p>
+      <div class="actions">
+        <a class="btn gold" href="https://wa.me/971525457338" target="_blank" data-ar="اطلب عرض سعر" data-en="Get a Quote">اطلب عرض سعر</a>
+        <a class="btn outline" href="#sectors" data-ar="استعرض القطاعات" data-en="Explore Sectors">استعرض القطاعات</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat"><strong data-ar="تجارة عامة" data-en="General Trading">تجارة عامة</strong><span data-ar="حلول مرنة حسب السوق" data-en="Flexible market-driven solutions">حلول مرنة حسب السوق</span></div>
+    <div class="stat"><strong data-ar="استيراد وتصدير" data-en="Import & Export">استيراد وتصدير</strong><span data-ar="ربط الأسواق والفرص" data-en="Connecting markets and opportunities">ربط الأسواق والفرص</span></div>
+    <div class="stat"><strong data-ar="جملة وتجزئة" data-en="Wholesale & Retail">جملة وتجزئة</strong><span data-ar="خدمة للشركات والأفراد" data-en="Serving businesses and individuals">خدمة للشركات والأفراد</span></div>
+    <div class="stat"><strong data-ar="تواصل سريع" data-en="Fast Response">تواصل سريع</strong><span data-ar="خدمة مباشرة عبر واتساب" data-en="Direct WhatsApp communication">خدمة مباشرة عبر واتساب</span></div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container two">
+    <div class="box">
+      <span class="tag" data-ar="من نحن" data-en="About Us">من نحن</span>
+      <h2 data-ar="تعريف المؤسسة" data-en="Company Profile">تعريف المؤسسة</h2>
+      <p data-ar="رواد العاصمة للتجارة العامة مؤسسة متخصصة في تقديم حلول تجارية متكاملة، من خلال الاستيراد والتصدير والتوزيع وتوفير المنتجات لمجالات متنوعة وفق احتياجات العملاء وحركة السوق."
+         data-en="Rowad Al Asema General Trading is specialized in integrated trading solutions through import, export, distribution and product sourcing across multiple sectors according to customer needs and market demand.">
+         رواد العاصمة للتجارة العامة مؤسسة متخصصة في تقديم حلول تجارية متكاملة، من خلال الاستيراد والتصدير والتوزيع وتوفير المنتجات لمجالات متنوعة وفق احتياجات العملاء وحركة السوق.
+      </p>
+      <p data-ar="نعتمد على المرونة في اختيار المنتجات، والسرعة في الاستجابة، وبناء علاقات تجارية طويلة المدى مع العملاء والموردين."
+         data-en="We focus on product flexibility, fast response and building long-term business relationships with customers and suppliers.">
+         نعتمد على المرونة في اختيار المنتجات، والسرعة في الاستجابة، وبناء علاقات تجارية طويلة المدى مع العملاء والموردين.
+      </p>
+    </div>
+    <div class="box side">
+      <span class="tag" data-ar="رؤيتنا" data-en="Our Vision">رؤيتنا</span>
+      <h3 data-ar="التوسع الذكي" data-en="Smart Growth">التوسع الذكي</h3>
+      <p data-ar="أن نكون اسمًا موثوقًا في قطاع التجارة العامة داخل الإمارات عبر التنوع والجودة والالتزام."
+         data-en="To become a trusted name in general trading in the UAE through diversity, quality and commitment.">
+         أن نكون اسمًا موثوقًا في قطاع التجارة العامة داخل الإمارات عبر التنوع والجودة والالتزام.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section dark">
+  <div class="container">
+    <div class="title">
+      <span class="tag" data-ar="الخدمات" data-en="Services">الخدمات</span>
+      <h2 data-ar="خدماتنا الأساسية" data-en="Our Core Services">خدماتنا الأساسية</h2>
+      <p data-ar="نقدم نموذج أعمال مرن يناسب طبيعة السوق التجاري." data-en="We provide a flexible business model designed for a dynamic trading market.">نقدم نموذج أعمال مرن يناسب طبيعة السوق التجاري.</p>
+    </div>
+
+    <div class="grid services">
+      <div class="service-card"><b>01</b><h3 data-ar="الاستيراد والتصدير" data-en="Import & Export">الاستيراد والتصدير</h3><p data-ar="تنسيق وتوريد المنتجات وربط الأسواق." data-en="Coordinating sourcing and connecting markets.">تنسيق وتوريد المنتجات وربط الأسواق.</p></div>
+      <div class="service-card"><b>02</b><h3 data-ar="التوريد والتوزيع" data-en="Supply & Distribution">التوريد والتوزيع</h3><p data-ar="توفير المنتجات داخل الإمارات حسب الطلب." data-en="Supplying products across the UAE according to demand.">توفير المنتجات داخل الإمارات حسب الطلب.</p></div>
+      <div class="service-card"><b>03</b><h3 data-ar="البيع بالجملة والتجزئة" data-en="Wholesale & Retail">البيع بالجملة والتجزئة</h3><p data-ar="خدمة الشركات والمتاجر والأفراد." data-en="Serving businesses, shops and individual customers.">خدمة الشركات والمتاجر والأفراد.</p></div>
+      <div class="service-card"><b>04</b><h3 data-ar="منتجات حسب الطلب" data-en="Custom Sourcing">منتجات حسب الطلب</h3><p data-ar="تنويع المنتجات حسب حاجة السوق." data-en="Sourcing products according to market needs.">تنويع المنتجات حسب حاجة السوق.</p></div>
+      <div class="service-card"><b>05</b><h3 data-ar="شراكات تجارية" data-en="Business Partnerships">شراكات تجارية</h3><p data-ar="بناء علاقات طويلة المدى." data-en="Building long-term business relationships.">بناء علاقات طويلة المدى.</p></div>
+      <div class="service-card"><b>06</b><h3 data-ar="استجابة سريعة" data-en="Fast Response">استجابة سريعة</h3><p data-ar="تواصل مباشر وفعال." data-en="Direct and efficient communication.">تواصل مباشر وفعال.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="sectors" class="section">
+  <div class="container">
+    <div class="title">
+      <span class="tag" data-ar="القطاعات" data-en="Sectors">القطاعات</span>
+      <h2 data-ar="قطاعات قابلة للنمو والتوسع" data-en="Scalable Trading Sectors">قطاعات قابلة للنمو والتوسع</h2>
+      <p data-ar="نعمل بمرونة لتغطية قطاعات متعددة حسب السوق والفرص التجارية." data-en="We operate flexibly across multiple sectors based on market demand and opportunities.">نعمل بمرونة لتغطية قطاعات متعددة حسب السوق والفرص التجارية.</p>
+    </div>
+
+    <div class="grid sectors">
+      <article class="sector-card"><img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80"><h3 data-ar="التجارة المتنوعة" data-en="Multi-Sector Trading">التجارة المتنوعة</h3><p data-ar="توريد أصناف متعددة حسب الفرص ومتطلبات العملاء." data-en="Sourcing diverse products according to opportunities and client needs.">توريد أصناف متعددة حسب الفرص ومتطلبات العملاء.</p></article>
+      <article class="sector-card"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&q=80"><h3 data-ar="قطع الغيار" data-en="Spare Parts">قطع الغيار</h3><p data-ar="منتجات صناعية وقطع غيار للأعمال التشغيلية." data-en="Industrial products and spare parts for operations.">منتجات صناعية وقطع غيار للأعمال التشغيلية.</p></article>
+      <article class="sector-card"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"><h3 data-ar="الإلكترونيات" data-en="Electronics">الإلكترونيات</h3><p data-ar="أجهزة ومنتجات تقنية وخيارات متنوعة." data-en="Electronic devices, technology products and various options.">أجهزة ومنتجات تقنية وخيارات متنوعة.</p></article>
+      <article class="sector-card"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80"><h3 data-ar="المواد الغذائية" data-en="Food Products">المواد الغذائية</h3><p data-ar="منتجات غذائية واستهلاكية لتلبية احتياجات الأسواق." data-en="Food and consumer goods for market needs.">منتجات غذائية واستهلاكية لتلبية احتياجات الأسواق.</p></article>
+      <article class="sector-card"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80"><h3 data-ar="مواد البناء" data-en="Construction Materials">مواد البناء</h3><p data-ar="توريد مستلزمات المشاريع والتجهيزات." data-en="Supplying project and construction requirements.">توريد مستلزمات المشاريع والتجهيزات.</p></article>
+      <article class="sector-card"><img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80"><h3 data-ar="اللوجستيات" data-en="Logistics">اللوجستيات</h3><p data-ar="دعم حركة البضائع والتجارة العامة." data-en="Supporting goods movement and general trading.">دعم حركة البضائع والتجارة العامة.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="section dark">
+  <div class="container">
+    <div class="title">
+      <span class="tag" data-ar="المنتجات" data-en="Products">المنتجات</span>
+      <h2 data-ar="نماذج من المنتجات" data-en="Product Categories">نماذج من المنتجات</h2>
+    </div>
+    <div class="grid products">
+      <div class="product-card"><img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=1200&q=80"><h3 data-ar="أجهزة إلكترونية" data-en="Electronic Devices">أجهزة إلكترونية</h3></div>
+      <div class="product-card"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80"><h3 data-ar="مواد غذائية" data-en="Food Products">مواد غذائية</h3></div>
+      <div class="product-card"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&q=80"><h3 data-ar="قطع غيار" data-en="Spare Parts">قطع غيار</h3></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="title">
+      <span class="tag" data-ar="لماذا نحن" data-en="Why Choose Us">لماذا نحن</span>
+      <h2 data-ar="مزايا تعزز الثقة" data-en="Advantages You Can Trust">مزايا تعزز الثقة</h2>
+    </div>
+    <div class="grid why">
+      <div class="why-card"><h3 data-ar="مرونة في الأعمال" data-en="Business Flexibility">مرونة في الأعمال</h3><p data-ar="القدرة على التوسع حسب الطلب والسوق." data-en="Ability to expand according to demand and market needs.">القدرة على التوسع حسب الطلب والسوق.</p></div>
+      <div class="why-card"><h3 data-ar="سرعة في الاستجابة" data-en="Fast Response">سرعة في الاستجابة</h3><p data-ar="تواصل مباشر وخدمة سريعة." data-en="Direct communication and fast service.">تواصل مباشر وخدمة سريعة.</p></div>
+      <div class="why-card"><h3 data-ar="تنوع في القطاعات" data-en="Diverse Sectors">تنوع في القطاعات</h3><p data-ar="خدمة أكثر من مجال تجاري." data-en="Serving multiple trading sectors.">خدمة أكثر من مجال تجاري.</p></div>
+      <div class="why-card"><h3 data-ar="جملة وتجزئة" data-en="Wholesale & Retail">جملة وتجزئة</h3><p data-ar="خدمة الشركات والأفراد." data-en="Serving companies and individuals.">خدمة الشركات والأفراد.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta-box">
+    <h2 data-ar="جاهزون لاستقبال طلباتكم التجارية" data-en="Ready to Receive Your Business Requests">جاهزون لاستقبال طلباتكم التجارية</h2>
+    <p data-ar="للتوريد أو الاستيراد أو الشراكات، تواصل معنا الآن." data-en="For supply, import, export or partnerships, contact us today.">للتوريد أو الاستيراد أو الشراكات، تواصل معنا الآن.</p>
+    <a class="btn gold" href="https://wa.me/971525457338" target="_blank" data-ar="تواصل واتساب" data-en="Contact on WhatsApp">تواصل واتساب</a>
+  </div>
+</section>
+
+
+<section id="company-photos" class="section dark">
+  <div class="container">
+    <div class="title">
+      <span class="tag" data-ar="مقر الشركة" data-en="Company Premises">مقر الشركة</span>
+      <h2 data-ar="المكتب الإداري والمخزن" data-en="Office & Warehouse">المكتب الإداري والمخزن</h2>
+      <p data-ar="صورة توضيحية احترافية لمقر العمل والمخزن وسيارة الشركة."
+         data-en="A professional visual representation of the company office, warehouse and branded vehicle.">
+         صورة توضيحية احترافية لمقر العمل والمخزن وسيارة الشركة.
+      </p>
+    </div>
+
+    <div class="grid company-gallery">
+      <div class="company-photo-card">
+        <img src="assets/office-warehouse.png" alt="Rowad Al Asema Office and Warehouse">
+        <div class="photo-caption">
+          <h3 data-ar="مقر إداري ومخزن مجهز لخدمة الأعمال" data-en="Office and Warehouse Ready for Business Operations">مقر إداري ومخزن مجهز لخدمة الأعمال</h3>
+          <p data-ar="يعكس هذا القسم هوية الشركة واحترافيتها في إدارة الطلبات والتوريد والتوزيع."
+             data-en="This section reflects the company's identity and professionalism in managing orders, supply and distribution.">
+             يعكس هذا القسم هوية الشركة واحترافيتها في إدارة الطلبات والتوريد والتوزيع.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container two">
+    <div>
+      <span class="tag" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</span>
+      <h2 data-ar="بيانات التواصل" data-en="Contact Details">بيانات التواصل</h2>
+      <p data-ar="يسعدنا استقبال استفساراتكم التجارية مباشرة." data-en="We are happy to receive your business inquiries directly.">يسعدنا استقبال استفساراتكم التجارية مباشرة.</p>
+    </div>
+
+    <div class="contact">
+      <div class="contact-card">
+        <strong data-ar="الموبايل / واتساب" data-en="Mobile / WhatsApp">الموبايل / واتساب</strong>
+        <span class="num">052 545 7338</span>
+      </div>
+
+      <div class="contact-card">
+        <strong data-ar="الهاتف الأرضي" data-en="Landline">الهاتف الأرضي</strong>
+        <span class="num">04 338 7935</span>
+      </div>
+
+      <div class="contact-card">
+        <strong data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</strong>
+        <span class="email">info@rowadalasema.com</span><br>
+        <span class="email">hr@rowadalasema.com</span>
+      </div>
+
+      <div class="contact-card">
+        <strong data-ar="العنوان" data-en="Address">العنوان</strong>
+        <span data-ar="مبنى سيتي جيت، بور سعيد، ديرة، دبي، الطابق M، مكتب رقم 04 — أمام ديرة سيتي سنتر، خلف البيت الأخضر ووكالة تويوتا الفطيم."
+              data-en="City Gate Building, Port Saeed, Deira, Dubai, M Floor, Office No. 04 — Opposite Deira City Centre, behind Green House and Al-Futtaim Toyota.">
+          مبنى سيتي جيت، بور سعيد، ديرة، دبي، الطابق M، مكتب رقم 04 — أمام ديرة سيتي سنتر، خلف البيت الأخضر ووكالة تويوتا الفطيم.
+        </span>
+      </div>
+
+      <div class="contact-card">
+        <strong data-ar="النشاط" data-en="Activity">النشاط</strong>
+        <span>General Trading</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="map-box">
+      <iframe
+        src="https://www.google.com/maps?q=25.2562681,55.3341819&z=18&output=embed"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <div style="text-align:center;margin-top:24px">
+      <a class="btn gold" href="https://maps.app.goo.gl/exP3pHYXqm3MMpou6" target="_blank"
+         data-ar="فتح الموقع على Google Maps" data-en="Open Location on Google Maps">
+        فتح الموقع على Google Maps
+      </a>
+    </div>
+  </div>
+</section>
+
+<a class="float-wa" href="https://wa.me/971525457338" target="_blank" data-ar="واتساب" data-en="WhatsApp">واتساب</a>
+
+<footer>
+  <div class="container footer">
+    <div>
+      <strong data-ar="رواد العاصمة للتجارة العامة" data-en="Rowad Al Asema General Trading">رواد العاصمة للتجارة العامة</strong>
+      <p>ROWAD AL ASEMA GENERAL TRADING</p>
+    </div>
+    <span>© 2026 Rowad Al Asema. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+let currentLang = "ar";
+
+function toggleLang(){
+  currentLang = currentLang === "ar" ? "en" : "ar";
+
+  document.querySelectorAll("[data-ar]").forEach(function(el){
+    el.innerText = el.getAttribute("data-" + currentLang);
+  });
+
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+  document.body.classList.toggle("en", currentLang === "en");
+  document.getElementById("langBtn").innerText = currentLang === "ar" ? "EN" : "AR";
+}
+</script>
+
+</body>
+</html>
